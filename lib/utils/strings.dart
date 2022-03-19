@@ -8,6 +8,7 @@ class Str {
   static String profile = "Profile";
   static String favorite = "Favorite";
   static String article = "Article";
+  static String trending = "Trending";
 
   /// Feed Screen
   static String findBlogPerson = "I want to find a blog, person";

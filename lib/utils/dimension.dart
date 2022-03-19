@@ -27,4 +27,7 @@ class Dimens {
 
   static double feedBoxHeight = 360;
   static double feedBoxWidth = 220;
+
+  static double buttonHeight = 50.0;
+  static double buttonWidth = 360.0;
 }

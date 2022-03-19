@@ -4,6 +4,7 @@ import 'package:code_blogs/views/tabs/articles/articles_screen.dart';
 import 'package:code_blogs/views/tabs/favorite/favorite_screen.dart';
 import 'package:code_blogs/views/tabs/feeds/feed_screen.dart';
 import 'package:code_blogs/views/tabs/profile/profile_screen.dart';
+import 'package:code_blogs/views/tabs/trandings/trandings.dart';
 import 'package:flutter/material.dart';
 
 class DashBoard extends StatefulWidget {
@@ -23,6 +24,7 @@ class _DashBoardState extends State<DashBoard> {
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
         selectedItemColor: Colors.black,
         onTap: onItemTapped,
         items: [
@@ -32,6 +34,12 @@ class _DashBoardState extends State<DashBoard> {
                 Icons.explore_outlined,
               ),
               label: Str.feed),
+          BottomNavigationBarItem(
+              backgroundColor: CustomColors.cardColor,
+              icon: const Icon(
+                Icons.trending_up_outlined,
+              ),
+              label: Str.trending),
           BottomNavigationBarItem(
               backgroundColor: CustomColors.cardColor,
               icon: const Icon(
@@ -60,11 +68,13 @@ class _DashBoardState extends State<DashBoard> {
       case 0:
         return const FeedScreen();
       case 1:
-        return const ProfileScreen();
+        return const TrendingScreen();
       case 2:
-        return const FavoriteScreen();
-      case 3:
         return const ArticlesScreen();
+      case 3:
+        return const FavoriteScreen();
+      case 4:
+        return const ProfileScreen();
       default:
         return const FeedScreen();
     }

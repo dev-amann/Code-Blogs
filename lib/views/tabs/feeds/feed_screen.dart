@@ -22,11 +22,8 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   void initState() {
     super.initState();
-
-    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       Iterable<FeedModel> reverse = feedList.reversed;
       postList = reverse.toList();
-    });
   }
 
   @override
